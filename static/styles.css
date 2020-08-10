@@ -1,0 +1,58 @@
+body {
+    background-color: #1f4068;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+
+.card {
+    background-color: #1b1b2f;
+    border: none;
+    margin-bottom: 1em;
+}
+
+.btn {
+    background-color: #e43f5a;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #162447;
+    border: none;
+}
+
+.title {
+    border-bottom: 5px solid #e43f5a;
+}
+
+.secTitle {
+    margin-top: .5em;
+}
+
+.red {
+    color: #e43f5a;
+}
+
+.site {
+    border-style: solid;
+}
+
+.nav {
+    margin-bottom: 1em;
+    border-bottom: .1em solid #e43f5a;
+}
+
+#active {
+    background-color: #162447;
+}
+
+.nav-link {
+    color: white;
+    background-color: #e43f5a;
+    margin: .75em;
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: #162447;
+    margin: .75em;
+}

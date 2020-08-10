@@ -1,0 +1,47 @@
+{% extends "index.html" %}
+<!--  -->
+{% block menu %}
+<!--  -->
+<ul class="nav nav-pills">
+    {% if curr == "All sites" %}
+    <li class="nav-item">
+        <a id="active" class="nav-link active" href="/">{{curr}}</a>
+    </li>
+    {% else %}
+    <li class="nav-item">
+        <a class="nav-link" href="/">All sites</a>
+    </li>
+    {% endif %}
+    <!--  -->
+    {% for button in buttonNames %}
+    <!--  -->
+    {% if curr == button %}
+    <li class="nav-item">
+        <a id="active" class="nav-link active" href="/{{button}}">{{button}}</a>
+    </li>
+    {% else %}
+    <li class="nav-item">
+        <a class="nav-link" href="/{{button}}">{{button}}</a>
+    </li>
+    {% endif %}
+    <!--  -->
+    {%endfor%}
+
+</ul>
+{% endblock %}
+<!--  -->
+{% block sites %}
+<!--  -->
+{% for site in allSites %}
+<div class="col-sm-10 col-md-6 col-lg-4">
+    <div class="card border-danger site">
+        <div class="card-body">
+            <h5 class="card-title">{{site.title}}</h5>
+            <p class="card-text">{{site.description}}</p>
+            <a href="{{site.url}}" class="btn btn-primary" target="_blank">Visit</a>
+        </div>
+    </div>
+</div>
+{%endfor%}
+<!--  -->
+{% endblock %}
